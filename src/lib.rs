@@ -386,6 +386,9 @@ macro_rules! quick_error {
             fn cause(&self) -> Option<&::std::error::Error> {
                 self.0.cause()
             }
+            fn source(&self) -> Option<&(::std::error::Error + 'static)> {
+                self.0.source()
+            }
         }
     };
 
