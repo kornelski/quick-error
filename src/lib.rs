@@ -382,6 +382,7 @@ macro_rules! quick_error {
             fn description(&self) -> &str {
                 self.0.description()
             }
+            #[allow(deprecated)]
             fn cause(&self) -> Option<&::std::error::Error> {
                 self.0.cause()
             }
