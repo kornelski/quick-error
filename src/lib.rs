@@ -387,7 +387,7 @@ macro_rules! quick_error {
                 self.0.cause()
             }
             fn source(&self) -> Option<&(::std::error::Error + 'static)> {
-                self.0.source()
+                self.0.source() // if you see an error here, upgrade your Rust to 1.30!
             }
         }
     };
